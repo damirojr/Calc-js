@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: dodgerblue;
+            color: whitesmoke;
+            font-size: 20pt;
+        }
+        h1{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        ola mundo
+    </h1>
+    <p>
+        Salve trupe!
+    </p>
+    <script>
+       function sum(n1,n2){
+           return n1 + n2
+        }
+        function sub(n1,n2){
+            return n1 - n2
+        }
+        function div(n1,n2){
+            return n1 / n2
+        }
+        function multi(n1,n2){
+            return n1 * n2
+        }
+
+
+window.alert('Bem vindo a calculadora do mal');
+
+var n1 = Number(window.prompt('insira um numero: '));
+var n2 = Number(window.prompt('insira segundo numero: '));
+var operacao = window.prompt('qual sera a operacao?\n "1 soma"\n "2 subtracao"\n "3 divisao"\n "4 multiplicacao"')
+
+if (operacao == 1){
+    window.alert(sum(n1,n2))
+}
+if (operacao == 2){
+    window.alert(sub(n1,n2))
+}
+if (operacao == 3){
+    window.alert(div(n1,n2))
+}
+if (operacao == 4){
+    window.alert(multi(n1,n2))
+}
+
+
+    </script>
+</body>
+</html>
