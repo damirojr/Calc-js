@@ -1,59 +1,20 @@
-function sum(n1, n2){
-    return n1 + n2
+
+function insert(value){
+    var n = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = n + value;
 }
-
-function sub(n1, n2){
-    return n1 - n2
+function clear1(){
+    document.getElementById('resultado').innerHTML = "";
 }
-
-function div(n1, n2){
-    return n1 / n2
+function delet(){
+    var resultado = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
 }
-
-function mul(n1, n2){
-    return n1 * n2
-}
-
-const readline = require('readline')({
-  input: process.stdin,
-  output: process.stdout
-});
-
-
-//Fim boolean
-var fim = true
-
-var n1=0 , n2=0
-var operacao
-
-do{
-    //console.log('calculadora do mal mlk')
-    readline.question('Escolha um numero: ', n1)
-    readline.question('Escolha o segundo numero: ', n2)
-    
-    readline.question('Selecione a operacao: 1 SOMA\n 2 SUBTRACAO\n 3 DIVISAO\n 4 MULTIPLICACAO', operacao)
-    
-
-
-    switch(operacao){
-        case operacao == 1:
-            return sum(n1, n2)
-            break
-        
-        case operacao == 2:
-            return sub(n1, n2)
-            break
-        
-            case operacao == 3:
-            return div(n1, n2)
-            break
-        
-            case operacao == 4:
-            return mul(n1, n2)
-            break
+function calcular(){
+    var resultado = document.getElementById('resultado').innerHTML;
+    if(resultado){
+        document.getElementById('resultado').innerHTML = eval(resultado);
+    }else{
+        document.getElementById('resultado').innerHTML = "Null";
     }
-
-    readline.question('quer sair?: True or False', fim)
-
-
-}while(fim==false)
+}
